@@ -1,0 +1,26 @@
+/control/verbose 2
+/tracking/verbose 0
+
+/process/optical/verbose 0
+
+
+/run/initialize
+
+/analysis/setFileName electron
+/analysis/h1/set      1  100 0 10
+/analysis/h1/setXaxis 1  "Energy [eV]"
+/analysis/h1/setYaxis 1  "Number of photons"
+/analysis/h1/set      2  100 0 10
+/analysis/h1/setXaxis 2  "Energy [eV]"
+/analysis/h1/setYaxis 2  "Number of photons"
+/analysis/h1/set      13 400 0 200
+/analysis/h1/setXaxis 13 "Creation time [ns]"
+/analysis/h1/setYaxis 13 "Number of photons"
+
+
+/gun/particle e-
+/gun/energy 100 MeV
+/gun/position 0 0 -0.375 m
+/gun/direction 0 0 1
+#/run/printProgress 10
+/run/beamOn 100
